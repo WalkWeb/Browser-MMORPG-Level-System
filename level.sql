@@ -16,7 +16,6 @@ CREATE TABLE `users` (
 -- Таблица Levels
 
 CREATE TABLE `levels` (
-	`id` INT AUTO_INCREMENT PRIMARY KEY,
 	`lvl` INT DEFAULT NULL,
 	`exp_to_lvl` INT DEFAULT NULL,
 	`exp_total` INT DEFAULT NULL
@@ -30,18 +29,18 @@ VALUES
 
 -- Заполняем таблицу Levels
 
-INSERT INTO `levels` (`id`, `lvl`, `exp_total`, `exp_to_lvl`)
+INSERT INTO `levels` (`lvl`, `exp_total`, `exp_to_lvl`)
 VALUES
-(NULL, '1', '0', '25'),
-(NULL, '2', '25', '66'),
-(NULL, '3', '91', '117'),
-(NULL, '4', '208', '175'),
-(NULL, '5', '383', '239'),
-(NULL, '6', '622', '309'),
-(NULL, '7', '931', '383'),
-(NULL, '8', '1314', '462'),
-(NULL, '9', '1776', '544'),
-(NULL, '10', '2320', '1000000');
+('1', '0', '25'),
+('2', '25', '66'),
+('3', '91', '117'),
+('4', '208', '175'),
+('5', '383', '239'),
+('6', '622', '309'),
+('7', '931', '383'),
+('8', '1314', '462'),
+('9', '1776', '544'),
+('10', '2320', '1000000');
 
 
 -- Удаление таблиц
