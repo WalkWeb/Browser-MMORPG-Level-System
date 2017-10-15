@@ -13,7 +13,7 @@ class Level
      * Информация о пользователе:
      * $userinfo[name] - имя
      * $userinfo[lvl] - уровень
-     * $userinfo[exp] - общее количество
+     * $userinfo[exp] - общее количество опыта
      * $userinfo[exp_to_lvl] - опыта до следующего уровня
      * $userinfo[exp_at_lvl] - опыта на текущем уровне
      * $userinfo[expbar] - ширина бара опыта
