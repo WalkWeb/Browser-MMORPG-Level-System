@@ -26,7 +26,7 @@ CREATE TABLE `levels` (
 
 INSERT INTO `users` (`id`, `name`, `lvl`, `exp`)
 VALUES
-(NULL, 'Vasya', '1', '0');
+(NULL, 'Diablo', '1', '0');
 
 -- Заполняем таблицу Levels
 

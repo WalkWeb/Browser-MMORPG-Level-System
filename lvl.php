@@ -95,12 +95,13 @@ $user = $page->getNewUserInfo();
 ?>
 <html>
 <head>
-<title>Пример системы уровней в браузерной MMORPG</title>
+    <title>Пример системы уровней в браузерной MMORPG</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <style>
         * {margin: 0;padding: 0;}
         body {background: #2b2b2b;color: #f1f1f1;}
         .user {width: 250px; background: #3b3b3b; margin-left: auto; margin-right: auto; margin-top: 100px;}
-        .ava {width: 250px; height: 250px; background: url('/img/ava.jpg');}
+        .ava {width: 250px; height: 250px; background: url('img/ava.jpg');}
         .name {width: 100%; padding: 3px; font-size: 22px; text-align: center;}
         .level {width: 100%; padding: 3px; font-size: 18px; text-align: center;}
         .exp {width: 100%; padding: 3px; font-size: 18px; text-align: center;}

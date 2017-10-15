@@ -6,7 +6,7 @@ class Model
 
     public function __construct()
     {
-        $this->DB = mysqli_connect('localhost', 'game', '12345', 'game')
+        $this->DB = mysqli_connect('localhost', 'user', 'password', 'database')
         or die('Невозможно подключиться к серверу БД. ' . mysql_error());
         $this->DB->query('SET NAMES utf8');
     }
@@ -23,7 +23,7 @@ class Model
             );
             $stmt->execute();
             if (!$stmt->error) {
-                $userinfo = [];
+                $userinfo = array();
                 $stmt->bind_result(
                     $userinfo['name'],
                     $userinfo['lvl'],
