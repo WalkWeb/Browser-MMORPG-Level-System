@@ -86,7 +86,13 @@ if ($_POST) {
     if ($_POST['exp'] === 'zero') {
         $page->zeroExp();
     } else {
-        $page->addExp($_POST['exp']);
+
+        if ($_POST['exp'] > 100 || $_POST['exp'] < 0) {
+            echo '<p color="#fff">Разбежались</p>';
+        } else {
+            $page->addExp($_POST['exp']);
+        }
+
     }
 }
 
@@ -105,7 +111,7 @@ $user = $page->getNewUserInfo();
         .name {width: 100%; padding: 3px; font-size: 22px; text-align: center;}
         .level {width: 100%; padding: 3px; font-size: 18px; text-align: center;}
         .exp {width: 100%; padding: 3px; font-size: 18px; text-align: center;}
-        .expbar {width: 100%; height: 20px; background: #800;}
+        .expbar {width: 100%; height: 20px; background: #800; overflow: hidden;}
         .expcur {height: 20px; background: #f00; border-radius: 3px;}
         .exptext {width: 100%; height: 20px; font-size: 18px; text-align: center; margin-top: -20px;}
         button {background-color: #f44336;border: none;color: white;padding: 10px 22px;text-align: center;text-decoration: none;  display: inline-block;  font-size: 16px;  margin: 5px;}
