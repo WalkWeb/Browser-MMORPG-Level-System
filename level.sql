@@ -6,7 +6,7 @@
 -- Таблица Users
 
 CREATE TABLE `users` (
-	`id` INT AUTO_INCREMENT PRIMARY KEY,
+	`id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	`name` VARCHAR(255),
 	`lvl`INT DEFAULT 1,
 	`exp` INT DEFAULT 0
@@ -16,7 +16,7 @@ CREATE TABLE `users` (
 -- Таблица Levels
 
 CREATE TABLE `levels` (
-	`lvl` INT DEFAULT NULL,
+	`lvl` INT UNSIGNED DEFAULT NULL,
 	`exp_to_lvl` INT DEFAULT NULL,
 	`exp_total` INT DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
