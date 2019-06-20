@@ -8,9 +8,14 @@
 
 // Параметры подключения к базе
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'level');
-define('DB_USER', 'level');
-define('DB_PASSWORD', '12345');
+define('DB_NAME', 'YOU_DATABASE_NAME');
+define('DB_USER', 'YOU_DATABASE_USER');
+define('DB_PASSWORD', 'YOU_DATABASE_PASSWORD');
+
+// Сразу делаем проверку, если пользователь забыл заменить параметры подключения к базе на свои
+if (DB_NAME === 'YOU_DATABASE_NAME' || DB_USER === 'YOU_DATABASE_USER' || DB_PASSWORD === 'YOU_DATABASE_PASSWORD') {
+    die('<h1>Вы забыли указать свои параметры подключения к MySQL базе в index.php</h1>');
+}
 
 // Объект работы с базой
 require_once 'src/DBConnection.php';
