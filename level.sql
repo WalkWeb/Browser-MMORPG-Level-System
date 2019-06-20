@@ -1,49 +1,40 @@
+########################################################################################################################
+#             Заполнение базы необходимыми данными. Просто скопируйте и выполните данный SQL-код                       #
+########################################################################################################################
 
-
-
-
-
--- Таблица Users
+# Таблица Users
 
 CREATE TABLE `users` (
 	`id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	`name` VARCHAR(255),
-	`lvl`INT DEFAULT 1,
-	`exp` INT DEFAULT 0
+	`lvl`INT UNSIGNED DEFAULT 1,
+	`exp` INT UNSIGNED DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
--- Таблица Levels
+# Таблица Levels
 
 CREATE TABLE `levels` (
 	`lvl` INT UNSIGNED DEFAULT NULL,
-	`exp_to_lvl` INT DEFAULT NULL,
-	`exp_total` INT DEFAULT NULL
+	`exp_to_lvl` INT UNSIGNED DEFAULT NULL,
+	`exp_total` INT UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Заполняем таблицу User
+# Заполняем таблицу User
 
-INSERT INTO `users` (`id`, `name`, `lvl`, `exp`)
-VALUES
-(NULL, 'Diablo', '1', '0');
+INSERT INTO `users` (`id`, `name`, `lvl`, `exp`) VALUES
+(NULL, 'Diablo', 1, 0);
 
--- Заполняем таблицу Levels
+# Заполняем таблицу Levels
 
-INSERT INTO `levels` (`lvl`, `exp_total`, `exp_to_lvl`)
-VALUES
-('1', '0', '25'),
-('2', '25', '66'),
-('3', '91', '117'),
-('4', '208', '175'),
-('5', '383', '239'),
-('6', '622', '309'),
-('7', '931', '383'),
-('8', '1314', '462'),
-('9', '1776', '544'),
-('10', '2320', '1000000');
-
-
--- Удаление таблиц
-
-DROP TABLE `users`;
-DROP TABLE `levels`;
+INSERT INTO `levels` (`lvl`, `exp_total`, `exp_to_lvl`) VALUES
+(1, 0, 25),
+(2, 25, 66),
+(3, 91, 117),
+(4, 208, 175),
+(5, 383, 239),
+(6, 622, 309),
+(7, 931, 383),
+(8, 1314, 462),
+(9, 1776, 544),
+(10, 2320, 1000000);
