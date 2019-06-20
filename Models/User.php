@@ -137,7 +137,7 @@ class User extends Model
     }
 
     /**
-     * Заполняет нашу модель данными из базы
+     * Заполняет модель данными из базы
      */
     private function setParams(): void
     {

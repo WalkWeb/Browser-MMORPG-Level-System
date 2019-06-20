@@ -51,13 +51,13 @@ class LevelManager extends Model
     public function getLevelByExp(int $exp): Level
     {
         $query = $this->db->query(
-            'SELECT 
+        'SELECT 
 
-                MAX(`t`.`lvl`) as `lvl`,
-                MAX(`t`.`exp_to_lvl`) as `exp_to_lvl`,
-                MAX(`t`.`exp_total`) as `exp_total`
-                
-                FROM (SELECT `lvl`, `exp_to_lvl`, `exp_total` FROM `levels` WHERE `exp_total` - ? <= 0) as `t`',
+            MAX(`t`.`lvl`) as `lvl`,
+            MAX(`t`.`exp_to_lvl`) as `exp_to_lvl`,
+            MAX(`t`.`exp_total`) as `exp_total`
+            
+            FROM (SELECT `lvl`, `exp_to_lvl`, `exp_total` FROM `levels` WHERE `exp_total` - ? <= 0) as `t`',
             [['type' => 'i', 'value' => $exp]],
             true
         );
